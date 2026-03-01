@@ -1,0 +1,43 @@
+@import "tailwindcss";
+
+
+body{
+    font-family: sans-serif;
+}
+
+.btn-primary{
+    text-shadow: 5px 3px 4px rgba(0, 0, 0, 0.5);
+    box-shadow:2px 2px 3px rgba(0, 0, 0, 0.6) ;
+    
+}
+
+.btn-primary:hover{
+    text-shadow: 5px 3px 4px rgba(0, 0, 0, 0.6);
+    box-shadow: 4px 4px 3px rgba(0, 0, 0, 0.6);
+    scale: 1.02;
+}
+
+.btn-secondary{
+    text-shadow: 5px 3px 7px rgba(0, 0, 0, 0.4);
+    box-shadow:2px 2px 3px rgba(0, 0, 0, 0.6) ;
+    
+}
+
+.btn-secondary:hover{
+    text-shadow: 5px 4px 5px rgba(0, 0, 0, 0.6);
+    box-shadow: 4px 5px 3px rgba(0, 0, 0, 0.6);
+   scale:1.01
+}
+
+p{
+    font-family: 'Karla', sans-serif;
+}
+
+h1{
+    font-family: 'Poppins', sans-serif;
+}
+
+h2,h3{
+    font-family: 'DM Sans', sans-serif;
+}
+
