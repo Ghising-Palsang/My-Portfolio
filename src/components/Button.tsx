@@ -19,7 +19,7 @@ export const Button = ({children, variant='primary'}: ButtonProps) => {
 
    const darkVariants = {
      primary: "bg-[#E5E7EB] text-[#0B0F14]",
-     secondary: "border-[#1F2937] text-[#E5E7EB]",
+     secondary: "border-gray-500 text-[#E5E7EB]",
    };
 
    const lightVariantHovers = {
