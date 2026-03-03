@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { FaBars, FaLightbulb, FaRegLightbulb } from "react-icons/fa";
+import { FaBars,  FaRegMoon, FaSun } from "react-icons/fa";
 import { FaXmark } from "react-icons/fa6";
 
 export interface ILight {
@@ -86,9 +86,9 @@ const Navbar = ({ isLightMode, lightToggle }: ILight) => {
           onClick={lightToggle}
         >
           {isLightMode ? (
-            <FaRegLightbulb className="text-gray-900 text-2xl" />
+            <FaSun className="text-gray-900 text-2xl" />
           ) : (
-            <FaLightbulb className="text-gray-400 text-2xl" />
+            <FaRegMoon className="text-gray-400 text-2xl" />
           )}
         </span>
       </div>

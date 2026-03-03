@@ -6,9 +6,9 @@ const About = () => {
   const { isLightMode } = useLightMode();
   return (
     <section
-      className={`min-h-screen  flex flex-col justify-center  items-start px-6  py-16 gap-17 relative border-b border-gray-700`}
+      className={`min-h-screen  flex flex-col justify-center  items-start px-6  py-16 gap-17 relative border-b border-gray-700 ${isLightMode && "bg-gray-200"}`}
     >
-      <div>
+      <div >
         <h1
           className={`${isLightMode ? "text-gray-900" : "text-white"} text-5xl font-extrabold tracking-widest`}
         >
