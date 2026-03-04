@@ -17,37 +17,41 @@ const Skills = () => {
     { name: "Others", variant: "others", id:4 },
   ];
   return (
-    <section className="min-h-screen flex flex-col justify-center px-6 md:px-12 gap-9 relative border-b border-gray-700">
+    <section className="min-h-screen flex flex-col justify-center px-6 md:px-12 gap-9 relative border-b border-gray-700 md:gap-16">
       {/* title */}
       <div className="max-w-3xl">
         <h1
-          className={`text-5xl tracking-wider font-extrabold ${isLightMode ? "text-gray-900" : "text-gray-100"}`}
+          className={`text-5xl tracking-wider font-extrabold ${isLightMode ? "text-gray-900" : "text-gray-100"} md:text-6xl lg:text-7xl lg:tracking-widest`}
         >
           Skills
         </h1>
       </div>
-      <div className="space-y-5">
+      <div className="space-y-5 md:space-y-10 lg:items-center lg:flex lg:flex-col lg:gap-4">
         {/* text */}
         <p
-          className={`text-lg tracking-tight font-medium leading-snug ${isLightMode ? "text-gray-900" : "text-gray-400"}`}
+          className={`text-lg tracking-tight font-medium leading-snug ${isLightMode ? "text-gray-900" : "text-gray-400"} md:text-xl  lg:text-xl md:self-start`}
         >
           Tools and tech I love working with everyday.
         </p>
         {/* logos */}
-        {categories.map(({ name, variant, id }) => (
-          <div className=" space-y-2" key={id}>
-            <h3
-              className={`text-lg tracking-wide font-semibold ${isLightMode ? "text-gray-900" : "text-gray-200"}`}
-            >
-              {name}
-            </h3>
-            <SkillIcon variant={variant} />
-          </div>
-        ))}
+        <div className="space-y-5 md:grid md:grid-cols-2 md:gap-5 md:mx-auto md:items-center lg:gap-7 lg:gap-x-48 ">
+          {categories.map(({ name, variant, id }) => (
+            <div className=" space-y-2 md:space-y-4 lg:space-y-6 " key={id}>
+              <h3
+                className={`text-lg tracking-wide font-semibold ${isLightMode ? "text-gray-900" : "text-gray-200"} md:text-xl `}
+              >
+                {name}
+              </h3>
+              <SkillIcon variant={variant} />
+            </div>
+          ))}
         </div>
-      <div className="flex gap-4 mt-6">
-        <Button>View Projects</Button>
-        <Button variant="secondary">Resume</Button>
+      </div>
+      <div className="flex flex-wrap gap-4 mt-6 md:justify-center lg:justify-center  lg:gap-6">
+        <Button href="Project">
+          View Projects
+        </Button>
+        <Button variant="secondary" download href="../../src/public/Palsang Ghising.pdf">Resume</Button>
       </div>
 
       <ScrollDown />

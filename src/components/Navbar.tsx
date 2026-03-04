@@ -40,7 +40,7 @@ const Navbar = ({ isLightMode, lightToggle }: ILight) => {
               {nav.map((item, index) => (
                 <li key={index}>
                   <a
-                    href="#"
+                    href={`#${item}`}
                     className={`text-lg md:text-xl font-medium px-3 py-2 rounded hover:${
                       isLightMode ? "bg-gray-200" : "bg-gray-700"
                     } transition-colors`}
@@ -58,7 +58,7 @@ const Navbar = ({ isLightMode, lightToggle }: ILight) => {
             {nav.map((item, index) => (
               <li key={index}>
                 <a
-                  href="#"
+                  href={`#${item}`}
                   className={`${isLightMode ? "text-gray-900  border-transparent border-2 hover:border-2 hover:border-black hover:rounded-xl" : "hover:bg-gray-700 hover:rounded-xl rounded-xl text-gray-100 transition-colors"} text-xl p-3 `}
                 >
                   {item}

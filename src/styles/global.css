@@ -1,53 +1,55 @@
 @import "tailwindcss";
 
-
-body{
-    font-family: sans-serif;
+body,
+html {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  overflow-x: hidden;
 }
 
-.btn-primary{
-    text-shadow: 5px 3px 4px rgba(0, 0, 0, 0.5);
-    box-shadow:2px 2px 3px rgba(0, 0, 0, 0.6) ;
-    
+.btn-primary {
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+  box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.2);
 }
 
-.btn-primary:hover{
-    text-shadow: 5px 3px 4px rgba(0, 0, 0, 0.6);
-    box-shadow: 4px 4px 3px rgba(0, 0, 0, 0.6);
-    scale: 1.02;
+.btn-primary:hover {
+  box-shadow: 3px 6px 10px rgba(0, 0, 0, 0.25);
+  transform: translateY(-1px);
 }
 
-.btn-secondary{
-    text-shadow: 5px 3px 7px rgba(0, 0, 0, 0.4);
-    box-shadow:2px 2px 3px rgba(0, 0, 0, 0.6) ;
-    
+.btn-secondary {
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.25);
+  box-shadow: 2px 4px 5px rgba(0, 0, 0, 0.15);
+}
+.btn-secondary:hover {
+  box-shadow: 3px 6px 8px rgba(0, 0, 0, 0.2);
+  transform: translateY(-1px);
 }
 
-.btn-secondary:hover{
-    text-shadow: 5px 4px 5px rgba(0, 0, 0, 0.6);
-    box-shadow: 4px 5px 3px rgba(0, 0, 0, 0.6);
-   scale:1.01
+p {
+  font-family: "Karla", sans-serif;
 }
 
-p{
-    font-family: 'Karla', sans-serif;
+h1 {
+  font-family: "Poppins", sans-serif;
 }
 
-h1{
-    font-family: 'Poppins', sans-serif;
+h2,
+h3 {
+  font-family: "DM Sans", sans-serif;
 }
-
-h2,h3{
-    font-family: 'DM Sans', sans-serif;
-}
-
 
 /* Light mode shadow */
 .card-light {
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.10);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
 }
 
 /* Dark mode shadow */
 .card-dark {
   box-shadow: 0 6px 24px rgba(255, 255, 255, 0.05);
+}
+
+.element::-webkit-scrollbar {
+  display: none;
 }

@@ -3,12 +3,13 @@ import type React from "react"
 import { useLightMode } from "../context/light.context"
 
 type ButtonProps = {
-    children: React.ReactNode,
-    variant?: "primary" | "secondary",
-    
+  children: React.ReactNode;
+  variant?: "primary" | "secondary";
+  href?: string;
+  download?: boolean | string;
 }
 
-export const Button = ({children, variant='primary'}: ButtonProps) => {
+export const Button = ({children, variant='primary', href, download}: ButtonProps) => {
   const {isLightMode} = useLightMode(); 
   
   const base = 'border px-4 py-3 text-lg rounded-2xl font-bold cursor-pointer'
@@ -18,19 +19,11 @@ export const Button = ({children, variant='primary'}: ButtonProps) => {
    };
 
    const darkVariants = {
-     primary: "bg-[#E5E7EB] text-[#0B0F14]",
-     secondary: "border-gray-500 text-[#E5E7EB]",
+     primary: "bg-[#E5E7EB] text-[#0B0F14] lg:px-8",
+     secondary: "border-gray-500 text-[#E5E7EB] lg:px-9 ",
    };
 
-   const lightVariantHovers = {
-     primary: "hover:bg-[#131B34]",
-     secondary: "hover:bg-[#E5E5E5] hover:drop-shadow-sm",
-   };
-
-   const darkVariantHovers = {
-     primary: "hover:bg-[#D1D5DB]",
-     secondary: "hover:bg-[#111827] hover:drop-shadow-sm",
-   };
+   
 
    const name = {
     primary : "btn-primary",
@@ -39,10 +32,34 @@ export const Button = ({children, variant='primary'}: ButtonProps) => {
    
    
 
+ if(href && download){
+   return (
+     <a download={download}  href={`${href}`}>
+       <button
+         className={`${base} ${isLightMode ? lightVariants[variant] : darkVariants[variant]} ${name[variant]} hover:scale-110 hover:opacity-80 transition-all`}
+       >
+         {children}
+       </button>
+     </a>
+   );
+ }else if (href){
   return (
-    <button className={`${base} ${isLightMode ? lightVariants[variant] : darkVariants[variant]} ${isLightMode ? lightVariantHovers[variant] : darkVariantHovers[variant]} ${name[variant]}` }>
+    <a href={`#${href}`}>
+      <button
+        className={`${base} ${isLightMode ? lightVariants[variant] : darkVariants[variant]} ${name[variant]} hover:scale-110 hover:opacity-80 transition-all`}
+      >
         {children}
-    </button>
-)
+      </button>
+    </a>
+  );
+ }else {
+  return (
+     <button
+       className={`${base} ${isLightMode ? lightVariants[variant] : darkVariants[variant]} ${name[variant]} hover:scale-110 hover:opacity-80 transition-all`}
+     >
+       {children}
+     </button>
+  )
+ }
 }
 

@@ -36,23 +36,25 @@ const Project = () => {
       image: "../../src/public/images/website.jpeg",
       tools: ["React", "Node", "Mongodb"],
       id: 3,
-    },
+    }
+
+    
   ];
   return (
-    <section className="min-h-screen flex flex-col justify-center items-start px-5 gap-16 relative">
-      <div>
+    <section className="min-h-screen flex flex-col justify-center items-start px-5 gap-16 relative  md:items-start lg:gap-28 lg:px-12 border-b border-gray-700" id='Project'>
+      <div className="">
         <h1
-          className={` font-extrabold text-6xl tracking-wider ${isLightMode ? "text-gray-900" : "text-gray-100"}`}
+          className={` font-extrabold text-6xl lg:text-7xl tracking-wider ${isLightMode ? "text-gray-900" : "text-gray-100"}`}
         >
           Project
         </h1>
       </div>
 
-      {/* Prjoect Cards */}
+      {/* Prjoect Cards  for mobile phone*/}
 
-      <div className="flex overflow-x-auto snap-x snap-mandatory w-full max-w-sm ">
+      <div className="flex overflow-x-auto snap-x snap-mandatory w-full md:hidden ">
         {card.map(({ name, description, image, tools, id }) => (
-          <div className="shrink-0 snap-start" key={id}>
+          <div className="shrink-0 md:shrink snap-start md:snap-none" key={id}>
             <ProjectCard
               name={name}
               description={description}
@@ -63,7 +65,22 @@ const Project = () => {
         ))}
       </div>
 
-      <div className="flex items-center self-center gap-6">
+      {/* Project Cards for tablet and desktop */}
+
+      <div className=" hidden w-full md:grid md:grid-cols-3 lg:grid-cols-3 md:gap-6">
+        {card.map(({ name, description, image, tools, id }) => (
+          <div className="shrink-0 md:shrink snap-start md:snap-none" key={id}>
+            <ProjectCard
+              name={name}
+              description={description}
+              image={image}
+              tools={tools}
+            />
+          </div>
+        ))}
+      </div>
+
+      <div className="flex items-center self-center gap-6 md:hidden">
         <p
           className={`${isLightMode ? "text-gray-900 " : "text-gray-200"} text-xl font-bold tracking-wider`}
         >

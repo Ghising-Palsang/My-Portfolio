@@ -30,7 +30,7 @@ const SkillIcon = ({ variant ="frontend" }: IVariant) => {
   };
   const { isLightMode } = useLightMode();
   return (
-    <span className={`flex gap-7 text-4xl ${isLightMode ? "" : "text-white "}`}>
+    <span className={`flex gap-7 text-3xl md:text-4xl lg:text-5xl ${isLightMode ? "" : "text-white "}`}>
       {tools[variant].map((Icon, Index) => (
         <Icon
           key={Index}

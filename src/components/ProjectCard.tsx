@@ -10,9 +10,9 @@ export interface ICard {
 const ProjectCard = ({ name, description, image, tools }: ICard) => {
   const {isLightMode} = useLightMode()
   return (
-    <div className={`${isLightMode ? "text-gray-900 border-gray-300 card-light" : "text-gray-200 border-gray-600 card-dark"} flex flex-col gap-4 border-2  p-4 `}>
+    <div className={`${isLightMode ? "text-gray-900 border-gray-300 card-light" : "text-gray-200 border-gray-600 card-dark"} flex flex-col gap-4 border-2  p-4 sm:w-80 md:w-auto lg:w-auto`}>
       <div>
-        <img src={image} alt={name} className="w-71 h-40" />
+        <img src={image} alt={name} className="w-full h-40 object-cover " />
       </div>
       <div className="flex flex-col items-center leading-snug">
         <h4 className="font-semibold">{name}</h4>

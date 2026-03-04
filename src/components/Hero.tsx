@@ -7,7 +7,7 @@ const Hero = () => {
   const{isLightMode} = useLightMode()
   return (
     <div
-      className={`min-h-screen flex flex-col justify-center items-start px-6 lg:px-12 gap-6  text-white ${isLightMode ? "bg-[#F0F4F8]" : "bg-[#0B0F14]"} border-b border-gray-700`}
+      className={`min-h-screen flex flex-col justify-center items-start px-6 lg:px-12 gap-6   text-white ${isLightMode ? "bg-[#F0F4F8]" : "bg-[#0B0F14]"} border-b border-gray-700`}
     >
       <div className="space-y-1">
         <p
@@ -40,8 +40,12 @@ const Hero = () => {
       </div>
 
       <div className="flex gap-4 mt-4">
-        <Button>View Projects</Button>
-        <Button variant="secondary">About Me</Button>
+        <Button href="Project">
+         View Projects
+        </Button>
+        <Button variant="secondary" href="About">
+         About Me
+        </Button>
       </div>
 
       <ScrollDown />
