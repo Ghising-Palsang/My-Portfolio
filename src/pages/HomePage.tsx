@@ -2,9 +2,10 @@ import Snowfall from "react-snowfall";
 import About from "../components/About";
 import Contact from "../components/Contact";
 import Hero from "../components/Hero";
-import Project from "../components/Project";
+
 import Skills from "../components/Skills";
 import { useLightMode } from "../context/light.context";
+import Project from "../components/Project";
 
 const HomePage = () => {
   const {isLightMode} = useLightMode()
@@ -36,7 +37,7 @@ const HomePage = () => {
         <Skills />
       </div>
       <div className="w-full">
-        <Project />
+        <Project/>
       </div>
 
       <div className="w-full">

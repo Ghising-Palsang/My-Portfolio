@@ -41,3 +41,13 @@ h2,h3{
     font-family: 'DM Sans', sans-serif;
 }
 
+
+/* Light mode shadow */
+.card-light {
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.10);
+}
+
+/* Dark mode shadow */
+.card-dark {
+  box-shadow: 0 6px 24px rgba(255, 255, 255, 0.05);
+}
