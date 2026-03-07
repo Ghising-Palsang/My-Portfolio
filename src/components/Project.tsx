@@ -19,21 +19,21 @@ const Project = () => {
     {
       name: "Task Manager App",
       description: "Full-stack productivity app with JWT auth",
-      image: "../../src/public/images/website.jpeg",
+      image: "../public/images/website.jpeg",
       tools: ["React", "Node", "Mongodb"],
       id: 1,
     },
     {
       name: "Blog",
       description: "Full-stack productivity app with JWT auth",
-      image: "../../src/public/images/website.jpeg",
+      image: "../public/images/website.jpeg",
       tools: ["React", "Node", "Mongodb"],
       id: 2,
     },
     {
       name: "Ecom",
       description: "Full-stack productivity app with JWT auth",
-      image: "../../src/public/images/website.jpeg",
+      image: "../public/images/website.jpeg",
       tools: ["React", "Node", "Mongodb"],
       id: 3,
     }
