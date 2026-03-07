@@ -7,7 +7,7 @@ const Hero = () => {
 
   return (
     <section
-      className={`min-h-screen flex flex-col px-6 lg:px-12 text-white ${
+      className={`min-h-screen flex flex-col px-6 lg:px-12 pt-20 text-white ${
         isLightMode ? "bg-[#F0F4F8]" : "bg-[#0B0F14]"
       } border-b border-gray-700`}
     >
