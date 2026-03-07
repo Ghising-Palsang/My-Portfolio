@@ -51,7 +51,7 @@ const Contact = () => {
       </div>
 
       <div className="flex mt-6 self-center">
-        <Button href="/public/resume.pdf" download="/public/resume.pdf" >
+        <Button href="/public/resume.pdf" download="/resume.pdf" >
           Resume
         </Button>
       </div>

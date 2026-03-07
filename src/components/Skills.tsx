@@ -64,7 +64,7 @@ const Skills = () => {
       {/* Buttons */}
       <div className="flex flex-wrap gap-4 mt-6 md:justify-center lg:justify-center lg:gap-6">
         <Button href="Project">View Projects</Button>
-        <Button variant="secondary" download href="../../public/resume.pdf">
+        <Button variant="secondary" download href="/resume.pdf">
           Resume
         </Button>
       </div>
