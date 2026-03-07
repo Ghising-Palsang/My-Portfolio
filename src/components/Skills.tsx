@@ -36,7 +36,10 @@ const Skills = () => {
         {/* logos */}
         <div className="space-y-5 md:grid md:grid-cols-2 md:gap-5 md:mx-auto md:items-center lg:gap-7 lg:gap-x-48 ">
           {categories.map(({ name, variant, id }) => (
-            <div className=" space-y-2 md:space-y-4 lg:space-y-6 " key={id}>
+            <div
+              className=" space-y-2 md:space-y-4 lg:space-y-6 min-h-40"
+              key={id}
+            >
               <h3
                 className={`text-lg tracking-wide font-semibold ${isLightMode ? "text-gray-900" : "text-gray-200"} md:text-xl `}
               >
@@ -48,13 +51,15 @@ const Skills = () => {
         </div>
       </div>
       <div className="flex flex-wrap gap-4 mt-6 md:justify-center lg:justify-center  lg:gap-6">
-        <Button href="Project">
-          View Projects
+        <Button href="Project">View Projects</Button>
+        <Button variant="secondary" download href="../../public/resume.pdf">
+          Resume
         </Button>
-        <Button variant="secondary" download href="../../src/public/Palsang Ghising.pdf">Resume</Button>
       </div>
 
-      <ScrollDown />
+      <div>
+        <ScrollDown />
+      </div>
     </section>
   );
 };

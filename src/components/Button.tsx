@@ -19,8 +19,8 @@ export const Button = ({children, variant='primary', href, download}: ButtonProp
    };
 
    const darkVariants = {
-     primary: "bg-[#E5E7EB] text-[#0B0F14] lg:px-8",
-     secondary: "border-gray-500 text-[#E5E7EB] lg:px-9 ",
+     primary: "bg-[#E5E7EB] text-[#0B0F14] lg:px-5",
+     secondary: "border-gray-500 text-[#E5E7EB] lg:px-6 ",
    };
 
    
