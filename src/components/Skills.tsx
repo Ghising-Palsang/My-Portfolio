@@ -42,7 +42,7 @@ const Skills = () => {
         </p>
 
         {/* Logos */}
-        <div className="space-y-5 md:grid md:grid-cols-2 md:gap-5 md:mx-auto md:items-center lg:gap-7 lg:gap-x-48">
+        <div className="flex flex-col gap-3 md:grid md:grid-cols-2 md:gap-5 md:mx-auto md:items-center lg:gap-7 lg:gap-x-48">
           {categories.map(({ name, variant, id }) => (
             <div
               className="space-y-2 md:space-y-4 lg:space-y-6 min-h-40"
