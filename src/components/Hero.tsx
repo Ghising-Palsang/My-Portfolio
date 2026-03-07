@@ -40,15 +40,16 @@ const Hero = () => {
       </div>
 
       <div className="flex gap-4 mt-4">
-        <Button href="Project">
-         View Projects
-        </Button>
+        <Button href="Project">View Projects</Button>
         <Button variant="secondary" href="About">
-         About Me
+          About Me
         </Button>
       </div>
 
-      <ScrollDown />
+      <div className="mt-auto">
+        <ScrollDown />
+      
+      </div>
     </div>
   );
 };
