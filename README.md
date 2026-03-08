@@ -23,7 +23,7 @@ my-portfolio-lac-zeta-63.vercel.app
 ![Homepage](./screenshots/portfolio.jpeg)
 ![Mobile View](./screenshots/portfolioMobile.jpeg)
 ![Light](./screenshots/portfolioLight.jpeg)
-![Projects Section](./screenshots/portfolioProject.jpeg)
+![Projects Section](./screenshots/portfolioProjects.jpeg)
 ![Projects Mobile View](./screenshots/portfolioMobileProject.jpeg)
 
 ## Installation
