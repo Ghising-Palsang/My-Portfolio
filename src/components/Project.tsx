@@ -20,7 +20,7 @@ const Project = () => {
     {
       name: "Task Manager App",
       description: "Full-stack productivity app with JWT auth",
-      image: "/images/task.png",
+      image: "/images/task.jpeg",
       tools: ["React", "Node", "Mongodb"],
       id: 1,
       href: "task-manager-pro-eosin.vercel.app",
