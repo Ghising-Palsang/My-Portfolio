@@ -56,14 +56,16 @@ const Project = () => {
       {/* Prjoect Cards  for mobile phone*/}
 
       <div className="flex overflow-x-auto snap-x snap-mandatory w-full md:hidden ">
-        {card.map(({ name, description, image, tools, id }) => (
+        {card.map(({ name, description, image, tools, id, href }) => (
           <div className="shrink-0 md:shrink snap-start md:snap-none" key={id}>
-            <ProjectCard
-              name={name}
-              description={description}
-              image={image}
-              tools={tools}
-            />
+            <a href={href}>
+              <ProjectCard
+                name={name}
+                description={description}
+                image={image}
+                tools={tools}
+              />
+            </a>
           </div>
         ))}
       </div>
@@ -71,7 +73,7 @@ const Project = () => {
       {/* Project Cards for tablet and desktop */}
 
       <div className=" hidden w-full md:grid md:grid-cols-3 lg:grid-cols-3 md:gap-6">
-        {card.map(({ name, description, image, tools, id , href}) => (
+        {card.map(({ name, description, image, tools, id, href }) => (
           <div className="shrink-0 md:shrink snap-start md:snap-none" key={id}>
             <a href={href} rel="noopener noreferrer" target="_blank">
               <ProjectCard
