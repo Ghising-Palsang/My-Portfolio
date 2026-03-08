@@ -3,7 +3,7 @@
 This is my personal developer portfolio, showcasing my projects, skills, and experience.
 
 ## Live Demo
-my-portfolio-lac-zeta-63.vercel.app
+(https://my-portfolio-lac-zeta-63.vercel.app/)
 
 ## Features
 - Responsive design (desktop & mobile)
