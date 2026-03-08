@@ -10,6 +10,7 @@ export type ICard = {
   image: string;
   tools: string[];
   id: number;
+  href?: string
 };
 
 const Project = () => {
@@ -19,9 +20,10 @@ const Project = () => {
     {
       name: "Task Manager App",
       description: "Full-stack productivity app with JWT auth",
-      image: "/images/website.jpeg",
+      image: "/images/task.png",
       tools: ["React", "Node", "Mongodb"],
       id: 1,
+      href: "task-manager-pro-eosin.vercel.app",
     },
     {
       name: "Blog",
@@ -36,12 +38,13 @@ const Project = () => {
       image: "/images/website.jpeg",
       tools: ["React", "Node", "Mongodb"],
       id: 3,
-    }
-
-    
+    },
   ];
   return (
-    <section className="min-h-screen flex flex-col justify-center items-start px-5 gap-16 relative  md:items-start lg:gap-28 lg:px-12 border-b border-gray-700" id='Project'>
+    <section
+      className="min-h-screen flex flex-col justify-center items-start px-5 gap-16 relative  md:items-start lg:gap-28 lg:px-12 border-b border-gray-700"
+      id="Project"
+    >
       <div className="">
         <h1
           className={` font-extrabold text-6xl lg:text-7xl tracking-wider ${isLightMode ? "text-gray-900" : "text-gray-100"}`}
@@ -68,14 +71,16 @@ const Project = () => {
       {/* Project Cards for tablet and desktop */}
 
       <div className=" hidden w-full md:grid md:grid-cols-3 lg:grid-cols-3 md:gap-6">
-        {card.map(({ name, description, image, tools, id }) => (
+        {card.map(({ name, description, image, tools, id , href}) => (
           <div className="shrink-0 md:shrink snap-start md:snap-none" key={id}>
-            <ProjectCard
-              name={name}
-              description={description}
-              image={image}
-              tools={tools}
-            />
+            <a href={href}>
+              <ProjectCard
+                name={name}
+                description={description}
+                image={image}
+                tools={tools}
+              />
+            </a>
           </div>
         ))}
       </div>
